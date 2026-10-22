@@ -1,0 +1,54 @@
+<div class="page">
+
+  <h1 class="page-title">Edit Name</h1>
+
+  <!-- EDIT FORM -->
+  @if (selectedId !== null) {
+
+  <div class="edit-form">
+
+    <h2>Update Name</h2>
+
+    <ion-input type="text" label="Name" label-placement="floating" fill="outline" [(ngModel)]="editName">
+    </ion-input>
+
+    <ion-button expand="block" (click)="updateName()">
+      @if (isUpdating) {
+      Updating...
+      } @else {
+      Update
+      }
+    </ion-button>
+
+    <ion-button expand="block" fill="outline" (click)="cancelEdit()">
+      Cancel
+    </ion-button>
+
+  </div>
+
+  }
+
+  <!-- NAME LIST -->
+  <p>Total names: {{ names.length }}</p>
+
+  @for (item of names; track item.id) {
+
+  <div class="name-row">
+
+    <span>
+      {{ item.id }} - {{ item.name }}
+    </span>
+
+    <ion-button size="small" (click)="selectName(item)">
+      Edit
+    </ion-button>
+
+    <ion-button size="small" color="danger" (click)="deleteName(item)">
+      Delete
+    </ion-button>
+
+  </div>
+
+  }
+
+</div>

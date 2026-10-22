@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Name App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="tabs">
+
+    <ion-button
+      fill="clear"
+      routerLink="/main/create"
+      routerLinkActive="active-tab">
+      Create
+    </ion-button>
+
+    <ion-button
+      fill="clear"
+      routerLink="/main/edit"
+      routerLinkActive="active-tab">
+      Edit
+    </ion-button>
+
+    <ion-button
+      fill="clear"
+      routerLink="/main/view"
+      routerLinkActive="active-tab">
+      View
+    </ion-button>
+
+  </div>
+
+  <router-outlet></router-outlet>
+
+</ion-content>

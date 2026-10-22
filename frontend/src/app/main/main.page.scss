@@ -1,0 +1,18 @@
+.tabs {
+  display: flex;
+  width: 100%;
+}
+
+.tabs ion-button {
+  flex: 1;
+  margin: 0;
+
+  --border-radius: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.tabs ion-button.active-tab {
+  --color: #3880ff;
+  font-weight: bold;
+}

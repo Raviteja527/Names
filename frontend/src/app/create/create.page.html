@@ -1,0 +1,20 @@
+<div class="page">
+
+  <h1 class="page-title">Create Name</h1>
+
+  <div class="create-form">
+
+    <ion-input type="text" placeholder="Enter name" [(ngModel)]="name">
+    </ion-input>
+
+    <ion-button expand="block" (click)="saveName()">
+      @if (isSaving) {
+      Saving...
+      } @else {
+      Save Name
+      }
+    </ion-button>
+
+  </div>
+
+</div>
